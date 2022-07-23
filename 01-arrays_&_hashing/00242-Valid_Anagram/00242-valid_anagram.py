@@ -25,8 +25,8 @@ if __name__ == "__main__":
     o = Solution()
 
     # INPUT
-    s = "rat"
-    t = "cat"
+    s: str = "rat"
+    t: str = "cat"
 
     # OUTPUT
     result = o.isAnagram(s, t)
