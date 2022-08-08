@@ -14,4 +14,4 @@
 ## Two Pointers
 
 | LeetCode ID | Difficulty | Problem | Solutions |
-| 125 | Easy | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | |
+| 125 | Easy | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++](./02-two_pointers/00125-Valid_Palindrome/00125-valid_palindrome.cpp) &bull; [Go](./02-two_pointers/00125-Valid_Palindrome/00125-valid_palindrome.go) &bull; [Java](./02-two_pointers/00125-Valid_Palindrome/00125-valid_palindrome.java) &bull; [Python](./02-two_pointers/00125-Valid_Palindrome/00125-valid_palindrome.py) |
