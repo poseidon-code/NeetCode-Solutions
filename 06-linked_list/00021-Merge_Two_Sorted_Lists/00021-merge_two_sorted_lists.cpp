@@ -70,17 +70,17 @@ public:
 
 int main() {
     Solution o;
-    ListNode* head1 = NULL;
-    ListNode* head2 = NULL;
+    ListNode* ll1 = NULL;
+    ListNode* ll2 = NULL;
 
     // INPUT
     vector<int> li1 = {1,2,4};
     vector<int> li2 = {1,3,4};
-    llInput(&head1, li1);
-    llInput(&head2, li2);
+    llInput(&ll1, li1);
+    llInput(&ll2, li2);
 
     // OUTPUT
-    auto result = o.mergeTwoLists(head1, head2);
+    auto result = o.mergeTwoLists(ll1, ll2);
     llOutput(result);
 
     return 0;
