@@ -35,7 +35,7 @@ func mergeTwoLists(list1, list2 *ListNode) *ListNode {
     if list2 == nil {return list1}
 
     p := list1
-    if (list1.Val > list2.Val) {
+    if list1.Val > list2.Val {
         p = list2
         list2 = list2.Next
     } else {
@@ -44,7 +44,7 @@ func mergeTwoLists(list1, list2 *ListNode) *ListNode {
 
     c := p
     for list1!=nil && list2!=nil {
-        if (list1.Val < list2.Val) {
+        if list1.Val < list2.Val {
             c.Next = list1
             list1 = list1.Next
         } else {
@@ -64,14 +64,14 @@ func mergeTwoLists(list1, list2 *ListNode) *ListNode {
 }
 
 func main() {
-    head1, head2 := LinkedList{}, LinkedList{}
+    ll1, ll2 := LinkedList{}, LinkedList{}
     
     // INPUT
     li1, li2 := []int{1,2,4}, []int{1,3,4}
-    llInput(&head1.head, li1)
-    llInput(&head2.head, li2)
+    llInput(&ll1.head, li1)
+    llInput(&ll2.head, li2)
 
     // OUTPUT
-    result := mergeTwoLists(head1.head, head2.head)
+    result := mergeTwoLists(ll1.head, ll2.head)
     llOutput(result)
 }
