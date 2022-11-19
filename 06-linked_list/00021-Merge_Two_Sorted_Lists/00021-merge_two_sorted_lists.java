@@ -66,17 +66,17 @@ class Solution {
 
     public static void main(String[] args) {
         Solution o = new Solution();
-        LinkedList head1 = new LinkedList();
-        LinkedList head2 = new LinkedList();
+        LinkedList ll1 = new LinkedList();
+        LinkedList ll2 = new LinkedList();
 
         // INPUT
         int[] li1 = {1,2,4};
         int[] li2 = {1,3,4};
-        llInput(head1, li1);
-        llInput(head2, li2);
+        llInput(ll1, li1);
+        llInput(ll2, li2);
 
         // OUTPUT
-        var result = o.mergeTwoLists(head1.head, head2.head);
+        var result = o.mergeTwoLists(ll1.head, ll2.head);
         llOutput(result);
     }
 }
