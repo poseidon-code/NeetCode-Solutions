@@ -60,13 +60,13 @@ class Solution:
 
 if __name__ == "__main__":
     o = Solution()
-    head1, head2 = LinkedList(), LinkedList()
+    ll1, ll2 = LinkedList(), LinkedList()
 
     # INPUT
     li1, li2 = [1,2,4], [1,3,4]
-    head1.Input(li1)
-    head2.Input(li2)
+    ll1.Input(li1)
+    ll2.Input(li2)
 
     # OUTPUT
-    result = o.mergeTwoLists(head1.head, head2.head)
-    head1.Output(result)
+    result = o.mergeTwoLists(ll1.head, ll2.head)
+    ll1.Output(result)
