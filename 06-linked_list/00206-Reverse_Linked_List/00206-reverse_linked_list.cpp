@@ -57,14 +57,14 @@ public:
 
 int main() {
     Solution o;
-    ListNode* head = NULL;
+    ListNode* ll = NULL;
 
     // INPUT
     vector<int> li = {1,2,3,4,5};
-    llInput(&head, li);
+    llInput(&ll, li);
 
     // OUTPUT
-    auto result = o.reverseList(head);
+    auto result = o.reverseList(ll);
     llOutput(result);
 
     return 0;
