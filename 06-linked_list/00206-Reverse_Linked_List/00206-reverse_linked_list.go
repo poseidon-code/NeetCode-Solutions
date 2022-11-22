@@ -14,14 +14,14 @@ type LinkedList struct {
     head *ListNode
 }
 
-func (ll *LinkedList) Input(inputs []int) {
+func llInput(head **ListNode, inputs []int) {
     for i:=len(inputs)-1; i>=0; i-- {
-        node := &ListNode{inputs[i], ll.head}
-        ll.head = node
+        node := &ListNode{inputs[i], *head}
+        *head = node
     }
 }
 
-func (ll *LinkedList) Output(head *ListNode) {
+func llOutput(head *ListNode) {
     for head != nil {
         fmt.Print(head.Val, " -> ")
         head = head.Next
@@ -52,9 +52,9 @@ func main() {
 
     // INPUT
     li := []int{1,2,3,4,5}
-    ll.Input(li)
+    llInput(&ll.head, li)
 
     // OUTPUT
     result := reverseList(ll.head)
-    ll.Output(result)
+    llOutput(result)
 }
