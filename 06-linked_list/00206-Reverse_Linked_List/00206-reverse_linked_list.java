@@ -3,8 +3,6 @@
 
 
 class Solution {
-    public static ListNode head = null;
-
     public static class ListNode {
         int val;
         ListNode next;
@@ -13,10 +11,15 @@ class Solution {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
-    public static void llInput(int[] inputs) {
+    public static class LinkedList {
+        ListNode head;
+        LinkedList() { this.head = null; }
+    }
+
+    public static void llInput(LinkedList list, int[] inputs) {
         for (int i=inputs.length-1; i>=0; i--) {
-            ListNode node = new ListNode(inputs[i], head);
-            head = node;
+            ListNode node = new ListNode(inputs[i], list.head);
+            list.head = node;
         }
     }
 
@@ -49,13 +52,14 @@ class Solution {
 
     public static void main(String[] args) {
         Solution o = new Solution();
+        LinkedList ll = new LinkedList();
 
         // INPUT
         int[] li = {1,2,3,4,5};
-        llInput(li);
+        llInput(ll, li);
 
         // OUTPUT
-        var result = o.reverseList(head);
+        var result = o.reverseList(ll.head);
         llOutput(result);
     }
 }
