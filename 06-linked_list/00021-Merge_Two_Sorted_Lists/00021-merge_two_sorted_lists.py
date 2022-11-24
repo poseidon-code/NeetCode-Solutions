@@ -29,6 +29,7 @@ class LinkedList:
 
 
 class Solution:
+    # SOLUTION
     def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
         if list1 == None: return list2
         if list2 == None: return list1
