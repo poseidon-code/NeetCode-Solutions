@@ -29,6 +29,7 @@ class LinkedList:
 
 
 class Solution:
+    # SOLUTION
     def reverseList(self, head: ListNode) -> ListNode:
         if head == None or head.next == None: return head
         
