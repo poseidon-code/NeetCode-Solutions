@@ -6,8 +6,8 @@ package main
 import "fmt"
 
 type ListNode struct {
-    Val int
-    Next *ListNode
+    val int
+    next *ListNode
 }
 
 type LinkedList struct {
@@ -23,23 +23,23 @@ func llInput(head **ListNode, inputs []int) {
 
 func llOutput(head *ListNode) {
     for head != nil {
-        fmt.Print(head.Val, " -> ")
-        head = head.Next
+        fmt.Print(head.val, " -> ")
+        head = head.next
     }
     fmt.Println("NULL")
 }
 
 // SOLUTION
 func reverseList(head *ListNode) *ListNode {
-    if head == nil || head.Next == nil {return head}
+    if head == nil || head.next == nil {return head}
     
     var previous *ListNode
     current := head
-    next := head.Next
+    next := head.next
 
     for current != nil {
-        next = current.Next;
-        current.Next = previous
+        next = current.next;
+        current.next = previous
         previous = current
         current = next
     }
