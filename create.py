@@ -63,6 +63,11 @@ def addEntry(leetcodeID, leetcodeURL):
 
 
 if __name__ == '__main__':
+    if len(sys.argv) < 4 :
+        print("Insufficient arguements passed ! Usage :")
+        print("python creator.py <category-number> <leetcode-id> <leetcode-url>")
+        exit(0)
+
     categoryNumber, leetcodeID, leetcodeURL = sys.argv[1], sys.argv[2], sys.argv[3]
 
     categoryPaths = getCategoryPaths(categoryNumber)
