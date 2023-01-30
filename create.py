@@ -27,7 +27,7 @@ def createCategoryDirectory(categoryNumber: str) -> str:
 
 def createProblemDirectory(cd: str, leetcodeID: str, leetcodeURL: str) -> str:
     newProblemName = f"{leetcodeID.zfill(5)}-{getProblem(leetcodeURL).replace(' ', '_')}"
-    fp = f"{cd}{newProblemName}/"
+    fp = f"{cd}/{newProblemName}/"
     os.makedirs(fp)
     print(f"Solution directory created: {fp}")
     return fp
@@ -85,13 +85,13 @@ if __name__ == '__main__':
             for c in categoryPaths: print("\t- ", c)
         else:
             print(f"Category {categoryNumber} directory does not exists. Create category directory : ", end='')
-
             # create category directory
-            categoryDirectoryPath = createCategoryDirectory(categoryNumber)
+            createCategoryDirectory(categoryNumber)
         
         # create solutions directory
+        categoryDirectoryPath = getCategoryPaths(categoryNumber)[0]
         solutionDirectoryPath = createProblemDirectory(categoryDirectoryPath, leetcodeID, leetcodeURL)
-        
+
         # create solutions files
         createSolutionFiles(solutionDirectoryPath, leetcodeID, leetcodeURL)
 
