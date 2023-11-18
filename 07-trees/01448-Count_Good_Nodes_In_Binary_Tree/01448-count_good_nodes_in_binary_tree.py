@@ -2,7 +2,6 @@
 # https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
 
-from typing import List
 
 class TreeNode:
     def __init__(self, x: int):
