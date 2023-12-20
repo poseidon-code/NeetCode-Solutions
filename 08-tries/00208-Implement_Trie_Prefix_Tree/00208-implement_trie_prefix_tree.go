@@ -70,6 +70,7 @@ func (this *Trie) StartsWith(prefix string) bool {
 func main() {
 	trie := Constructor()
 
+	// OPERATIONS
 	trie.Insert("apple")
 	fmt.Println(trie.Search("apple"))
 	fmt.Println(trie.Search("app"))
