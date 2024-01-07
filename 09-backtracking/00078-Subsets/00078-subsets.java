@@ -32,11 +32,6 @@ class Solution {
 
         // OUTPUT
         var result = o.subsets(nums);
-
-        System.out.print("["); for (var x : result) {
-            System.out.print("["); for (var y : x) {
-                System.out.print(y + ",");
-            } System.out.print("\b],");
-        } System.out.println("\b]");
+        System.out.println(result);
     }
 }
