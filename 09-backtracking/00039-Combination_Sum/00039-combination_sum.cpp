@@ -26,7 +26,7 @@ private:
 
 public:
     // SOLUTOIN
-    vector<vector<int>> combinatioSum(vector<int>& candidates, int target) {
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         vector<int> current;
         vector<vector<int>> result;
         backtrack(candidates, target, 0, current, result);
@@ -43,7 +43,7 @@ int main() {
     int target = 7;
 
     // OUTPUT
-    auto result = o.combinatioSum(candidates, target);
+    auto result = o.combinationSum(candidates, target);
 
     cout << "["; for (auto x : result) {
         cout << "["; for (auto y : x) {
