@@ -28,6 +28,6 @@ class Solution {
 
         // OUTPUT
         var result = o.findKthLargest(nums, k);
-        System.err.println(result);
+        System.out.println(result);
     }
 }
